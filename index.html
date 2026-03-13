@@ -3,259 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio website for [Your Name]">
-    <title>Portfolio - [Your Name]</title>
+    <meta name="description" content="Professional portfolio website for Stanford Zulu">
+    <title>Portfolio - Stanford Zulu</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <!--
-    ============================================================
-    ASSIGNMENT 1: RESPONSIVE PORTFOLIO WEBSITE
-    CSC4035 Web Programming and Technologies
 
-    Instructions:
-    1. Complete all TODO sections below
-    2. Use semantic HTML5 elements
-    3. Ensure all images have alt attributes
-    4. Ensure all form inputs have labels
-    5. Test responsiveness at multiple breakpoints
-    ============================================================
-    -->
+<body>
+    <!-- toggle dark mode button-->
+    <div class="dark-mode">
+        <button onclick="document.body.classList.toggle('dark-mode')" type="button">Dark mode</button>
+    </div>
 
     <!-- Navigation -->
-    <header class="header">
+    <header class="site-header">
         <nav class="nav">
-            <!-- TODO: Create navigation with links to each section
-                 Requirements:
-                 - Logo/site title
-                 - Navigation links (Home, About, Projects, Contact)
-                 - Mobile-friendly (hamburger menu optional)
-                 - Active state indication
-            -->
-            <div class="nav__logo">
-                <a href="#home">[Your Name]</a>
+            <div class="logo">
+                <a href="#home">SZS</a>
             </div>
-            <ul class="nav__menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+
+            <div class="nav-content">
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <!-- hamburger navs so that they only show on smaller screens -->
+                <div class="menu">
+                    <input type="checkbox" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="nav-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
-            <!-- TODO: Create hero section
-                 Requirements:
-                 - Your name (h1)
-                 - Professional tagline
-                 - Call-to-action button
-                 - Consider using Flexbox for layout
-            -->
-            <div class="hero__content">
-                <h1>Your Name</h1>
-                <p class="hero__tagline">
-                    <!-- TODO: Add your professional tagline -->
-                    Web Developer | Designer | Problem Solver
+            <div class="hero-content">
+                <h1>STANFORD ZULU</h1>
+                <p class="hero-tagline">
+                    NETWORK ENGINEER | PROGRAMMER | SYSTEM SECURITY 
                 </p>
                 <a href="#contact" class="btn btn--primary">Get In Touch</a>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="about">
-            <!-- TODO: Create about section
-                 Requirements:
-                 - Section heading (h2)
-                 - Profile image with alt text
-                 - Professional bio (150+ words)
-                 - Skills list
-                 - Use CSS Grid or Flexbox for layout
-            -->
+        <section id="about" class="section">
             <div class="container">
                 <h2>About Me</h2>
-                <div class="about__content">
-                    <div class="about__image">
-                        <!-- TODO: Add your profile image -->
-                        <img src="images/profile-placeholder.jpg" alt="Profile photo of [Your Name]">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="images/stanfordprofile.png" alt="Stanford Zulu profile photo">
                     </div>
-                    <div class="about__text">
+                    <div class="about-text">
                         <p>
-                            <!-- TODO: Write your professional bio (150+ words)
-                                 Include:
-                                 - Your background
-                                 - Your interests in web development
-                                 - Your goals
-                                 - What makes you unique
-                            -->
-                            [Your professional bio goes here. Write at least 150 words about yourself,
-                            your background, your passion for web development, and your goals.
-                            This is your opportunity to introduce yourself to potential employers or clients.]
+                            Aspiring Network Engineer and Computer Science student dedicated to building robust
+                            scalable digital infrastructures. Currently specializing in cloud integration and network security,
+                            with a hands-on background in configuring Cisco environments and optimizing latency. 
+                            I'm passionate about bridging the gap between complex hardware systems and seamless user experiences.
                         </p>
-                        <h3>Skills</h3>
-                        <ul class="skills-list">
-                            <!-- TODO: Add your skills -->
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>JavaScript</li>
-                            <li>Responsive Design</li>
-                            <!-- Add more skills -->
-                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skills-card">
+                        <h3>Network Engineering</h3>
+                        <p>
+                            Proficient in designing and managing complex network infrastructures, including LAN/WAN configurations, routing protocols (OSPF, BGP), and network security measures.
+                        </p>
+                    </div>
+                    
+                    <div class="skills-card">
+                        <h3>Programming</h3>
+                        <p>
+                            Experienced in Python, Java, and C++ for developing automation scripts, network tools, and software applications. Familiar with version control systems like Git.
+                        </p>
+                    </div>
+
+                    <div class="skills-card">
+                        <h3>System Security</h3>
+                        <p>
+                            Knowledgeable in cybersecurity principles, including threat analysis, vulnerability assessment, and implementation of security protocols to protect digital assets.
+                        </p>
+                    </div>
+
+                    <div class="skills-card">
+                        <h3>Information Management</h3>
+                        <p>
+                            Managing information and information security.
+                        </p>
+                    </div>
+
+                    <div class="skills-card">
+                        <h3>Automation</h3>
+                        <p>
+                            System Automation and Robotic Process Automation (<strong>RPA</strong>) to streamline workflows, reduce manual tasks, and enhance operational efficiency across various IT processes.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <!-- TODO: Create projects section
-                 Requirements:
-                 - Section heading (h2)
-                 - Minimum 3 project cards
-                 - Each card: image, title, description, link(s)
-                 - Use CSS Grid for card layout
-            -->
+        <section id="projects" class="section"> 
             <div class="container">
                 <h2>My Projects</h2>
-                <div class="projects__grid">
-                    <!-- Project Card 1 -->
-                    <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project1-placeholder.jpg" alt="Screenshot of Project 1">
-                        <div class="project-card__content">
-                            <h3>Project Title 1</h3>
+                <div class="projects-grid">
+                    <article class="projects-card">
+                        <div class="projects-image">
+                            <img src="images/portfolio.png" width="400" height="300" alt="Portfolio website project screenshot">
+                        </div>
+                        <div class="project-info">
+                            <h3>Portfolio Website</h3>
                             <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
+                                A responsive portfolio website showcasing my skills and projects.
                             </p>
-                            <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
-                            </div>
+                            <a href="#" class="btn btn--small">Live Demo</a>
+                            <a href="#" class="btn btn--small btn--outline">GitHub</a>  
                         </div>
                     </article>
-
-                    <!-- Project Card 2 -->
-                    <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project2-placeholder.jpg" alt="Screenshot of Project 2">
-                        <div class="project-card__content">
-                            <h3>Project Title 2</h3>
+                    
+                    <article class="projects-card">
+                        <div class="projects-image">
+                            <img src="images/lab1.png" alt="Lab 1 project screenshot">
+                        </div>
+                        <div class="project-info">
+                            <h3>Lab 1 Project</h3>
                             <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
+                                A practice introduction to web development and programming languages.
                             </p>
-                            <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
-                            </div>
+                            <a href="#" class="btn btn--small">Live Demo</a>
+                            <a href="#" class="btn btn--small btn--outline">GitHub</a>
                         </div>
                     </article>
-
-                    <!-- Project Card 3 -->
-                    <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project3-placeholder.jpg" alt="Screenshot of Project 3">
-                        <div class="project-card__content">
-                            <h3>Project Title 3</h3>
+                    
+                    <article class="projects-card">
+                        <div class="projects-image">
+                            <img src="images/lab2.png" alt="Lab 2 project screenshot">
+                        </div>
+                        <div class="project-info">
+                            <h3>Lab 2 Project</h3>
                             <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
+                                A network architecture project where we designed a network for our class.
                             </p>
-                            <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
-                            </div>
+                            <a href="#" class="btn btn--small">Live Demo</a>
+                            <a href="#" class="btn btn--small btn--outline">GitHub</a>
                         </div>
                     </article>
-
-                    <!-- TODO: Add more project cards if desired -->
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <!-- TODO: Create contact section
-                 Requirements:
-                 - Section heading (h2)
-                 - Contact form with:
-                   - Name field (required)
-                   - Email field (required, type="email")
-                   - Message textarea (required)
-                   - Submit button
-                 - All inputs must have associated labels
-                 - Use HTML5 validation attributes
-            -->
+        <section id="contact" class="section">
             <div class="container">
-                <h2>Contact Me</h2>
-                <form class="contact__form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            placeholder="Your Name"
-                            minlength="2"
-                        >
+                <h2>CONTACT ME</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p>Reach out or follow up for collaborations and inquiries</p>
+                        <ul class="contact-list">
+                            <li>EMAIL: stanford.sakhile@cs.unza.zm</li>
+                            <li>LOCATION: Zambia Lusaka</li>
+                            <li>GITHUB: <a href="https://github.com/sakhile-bit">github/sakhile-bit</a></li>
+                        </ul>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            placeholder="your.email@example.com"
-                        >
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            placeholder="What is this regarding?"
-                        >
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            required
-                            rows="5"
-                            placeholder="Your message..."
-                            minlength="10"
-                        ></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--primary">Send Message</button>
-                </form>
+                    
+                    <form class="contact-form" action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">NAME:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">EMAIL:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">SUBJECT:</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select subject</option>
+                                <option value="general">GENERAL</option>
+                                <option value="collaboration">COLLABORATION</option>
+                                <option value="feedback">GIVE FEEDBACK</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">MESSAGE</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">SEND MESSAGE</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <!-- TODO: Create footer
-             Requirements:
-             - Copyright notice
-             - Social media links (optional)
-             - Back to top link (optional)
-        -->
-        <div class="container">
-            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-            <nav class="footer__social">
-                <!-- TODO: Add your social media links -->
-                <a href="#" aria-label="GitHub">GitHub</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                <a href="#" aria-label="Twitter">Twitter</a>
-            </nav>
-        </div>
-    </footer>
+    
+    <footer class="site-footer">
+        <p>&copy; STANFORD ZULU 2026 | ALL RIGHTS RESERVED</p>
+        <ul class="social-links">
+            <li><a href="https://facebook.com/stanford-sakhile-zulu">FACEBOOK</a></li>
+            <li><a href="https://github.com/khille-bit">GITHUB</a></li>
+            <li><a href="https://instagram.com/stanford-sakhile">INSTAGRAM</a></li>
+        </ul>
+    </footer>    
 </body>
 </html>
